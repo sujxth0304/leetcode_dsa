@@ -13,6 +13,8 @@ class Solution:
                 return 0 
 
             left_height = height(root.left)
+            if balanced[0] is False:
+                return 0
             right_height = height(root.right)
 
             if abs(left_height - right_height) > 1:
