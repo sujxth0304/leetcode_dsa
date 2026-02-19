@@ -11,7 +11,7 @@ class Solution:
         def height(root):
             if not root:
                 return 0
-            
+
             left = height(root.left)
             right = height(root.right)
 
@@ -19,8 +19,11 @@ class Solution:
                 balanced[0] = False
                 return 0
             return 1 + max(left, right)
-
         height(root)
         return balanced[0]
 
-                
+
+
+
+        
+
