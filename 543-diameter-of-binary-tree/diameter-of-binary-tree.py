@@ -14,10 +14,16 @@ class Solution:
             left = height(root.left)
             right = height(root.right)
 
-            diameter = left + right
-            largest_dia[0] = max(largest_dia[0], diameter)
+            dia= left + right
+            largest_dia[0] = max(dia, largest_dia[0])
 
             return 1 + max(left, right)
 
         height(root)
         return largest_dia[0]
+
+        
+
+        largest_dia[0] = max(dia, largest_dia[0])
+
+        
