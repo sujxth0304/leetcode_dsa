@@ -1,8 +1,10 @@
+from collections import defaultdict
 class Solution:
     def validPath(self, n: int, edges: List[List[int]], source: int, destination: int) -> bool:
+        # DFS with recursion
         if source == destination:
             return True
-
+    
         graph = defaultdict(list)
         for u, v in edges:
             graph[u].append(v)
@@ -11,6 +13,7 @@ class Solution:
         seen = set()
         seen.add(source)
         stack = [source]
+
         while stack:
             node = stack.pop()
             if node == destination:
@@ -21,5 +24,4 @@ class Solution:
                     stack.append(nei)
         return False
 
-        
-        return dfs(source)
+            
