@@ -4,4 +4,4 @@ from Visits v
 left join Transactions t
 on t.visit_id = v.visit_id
 where t.transaction_id is null
-group by customer_id
+group by v.customer_id
