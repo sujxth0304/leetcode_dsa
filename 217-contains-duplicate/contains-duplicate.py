@@ -1,8 +1,9 @@
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
-        tracker = set()
+        hashMap = {}
         for num in nums:
-            if num in tracker:
+            if num in hashMap:
                 return True
-            tracker.add(num)
+            else:
+                hashMap[num] = 1 + hashMap.get(num, 0)
         return False
