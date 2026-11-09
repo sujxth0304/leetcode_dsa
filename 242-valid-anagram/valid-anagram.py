@@ -11,6 +11,7 @@ class Solution:
                 s_map[c] += 1
             else:
                 s_map[c] = 1 + s_map.get(c, 0)
+
         for c in t:
             if c in t_map:
                 t_map[c] += 1
